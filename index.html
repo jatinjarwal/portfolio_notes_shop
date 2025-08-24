@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio | Tasks | Shop</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header>
+    <nav>
+      <button data-page="about" class="nav-btn active">About</button>
+      <button data-page="projects" class="nav-btn">Projects</button>
+      <button data-page="contact" class="nav-btn">Contact</button>
+      <button data-page="tasks" class="nav-btn">Tasks</button>
+      <button data-page="shop" class="nav-btn">Shop</button>
+    </nav>
+  </header>
+  
+  <main>
+    <!-- About Section -->
+    <section id="about" class="page visible">
+      <h1>XYZ</h1>
+      <p>Aspiring web developer with beginner skills in HTML, CSS, JS.</p>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ul>
+    </section>
+    <!-- Projects Section -->
+    <section id="projects" class="page">
+      <h2>Projects</h2>
+      <ul>
+        <li>This Portfolio Website</li>
+        <li>To-Do List App</li>
+        <li>Product Listing Page</li>
+      </ul>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="page">
+      <h2>Contact Me</h2>
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Name" required/>
+        <input type="email" id="email" placeholder="Email" required/>
+        <textarea id="message" rows="4" placeholder="Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+      <p id="contactStatus"></p>
+    </section>
+    <!-- To-Do List Section -->
+    <section id="tasks" class="page">
+      <h2>To-Do List / Notes</h2>
+      <input type="text" id="todoInput" placeholder="Your task or note..."/>
+      <button id="addTodoBtn">Add</button>
+      <ul id="todoList"></ul>
+    </section>
+    <!-- Shop Section -->
+    <section id="shop" class="page">
+      <h2>Product List</h2>
+      <div>
+        <select id="categoryFilter">
+          <option value="all">All Categories</option>
+          <option value="books">Books</option>
+          <option value="gadgets">Gadgets</option>
+        </select>
+        <input type="number" id="maxPrice" placeholder="Max Price"/>
+        <select id="sortProducts">
+          <option value="none">Sort</option>
+          <option value="priceAsc">Price: Low to High</option>
+          <option value="priceDesc">Price: High to Low</option>
+          <option value="ratingDesc">Rating: High to Low</option>
+        </select>
+        <button id="filterBtn">Apply</button>
+      </div>
+      <div id="productGrid"></div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
